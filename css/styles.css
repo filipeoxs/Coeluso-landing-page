@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+h1{
+    font-weight: 400;
+}
+h2{
+    font-weight: 300;
+}
+p{
+    font-weight: 100;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.10em;
+}
+body{
+    background:#0A2345;
+    scroll-behavior: smooth;
+
+}
+header {
+    margin-top: 0%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+    transition: all 1s;
+}
+.btn{
+    border-radius: 40px;
+    width: 9rem;
+    height: 3rem;
+    margin-top: 20px;
+    background: none;
+    border-color: #153A6D;
+    color: #fff;
+    border-style: solid;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #2A5EA4;
+}
+#logo{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+#logo img{
+    height: 50px;
+}
+#logo h1{
+    color: #fff;
+}
+.burger-wrapper {
+  cursor: pointer;
+}
+#menu {
+    width: 22rem;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(50rem);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    z-index: 98;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+        background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
+}
+#menu-inpt {
+    display: none;
+}
+
+#menu-inpt:checked ~ #menu {
+    transform: translateX(0rem);
+}
+#burger {
+    position: relative;
+    cursor: pointer;
+    width: 2rem;
+    height: 1.5rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 99;
+}
+
+#burger > span {
+    height: 2px;
+    background-color: #2A5EA4;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+#menu-inpt:checked ~ #burger > span {
+  background-color: #0A2345;
+}
+
+#menu-inpt:checked ~ #burger > span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+}
+#menu-inpt:checked ~ #burger > span:nth-child(2) {
+    opacity: 0;
+}
+#menu-inpt:checked ~ #burger > span:nth-child(3) {
+    transform: translateY(-18px) rotate(-45deg);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+}
+li a:hover{
+    background: #2A5EA4;
+    border-radius: 40px;
+    padding: 10px 30px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: auto;
+    padding-top: 2%;
+}
+.text-header{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+#title{
+    font-size: 40px;
+    color: #2A5EA4;
+}
+#sub-title{
+    font-size: 40px;
+
+    color: #fff;
+}
+section p{
+    color: #fff;
+}
+.container{
+    margin-top: 5rem;
+    width: 100%;
+    height: 40vh;
+}
+.container img{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#cards{
+    position: absolute;
+    top: 15rem;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#cards img{
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+#cards img:nth-child(1), #cards img:nth-child(3){
+    width: 120%;
+    height: 140%;
+    object-fit: contain;
+}
+#features{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10rem;
+    justify-content: space-around;
+}
+.card-features{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+#features img{
+    height: 400px;
+}
+#cellphone-feature{
+    height: 80vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#cellphone-feature section{
+    flex-direction: row;
+    width: 85%;
+    height: 90%;
+}
+#cellphone-feature section div{
+    height: 95%;
+    width: 34%;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+#inner-cellphone div div img{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+#inner-cellphone div div{
+    width: 100%;
+    height: 45%;
+}
+#inner-cellphone div div h1{
+    font-size: 20px;
+    color: #fff;
+}
+#inner-cellphone div div p{
+    padding-top: 2px;
+    color: #4E6078;
+    font-size: 14px;
+}
+#about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#about div{
+    width: 40%;
+    height: 200px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30px;
+}
+#about div img{
+    height: 30px;
+    margin-left: -6rem;
+}
+#img-about{
+    height: 600px;
+}
+#about div h1{
+    color: #fff;
+    margin-left: -4rem;
+}
+#about div p{
+    color: #5c6b80;
+}
+#opinions{
+    margin-top: 2rem;
+    height: 50vh;
+    width: 100%;
+    background-image: url("/assets/opinions.png");
+    background-position: center;
+    background-size: cover;
+}
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 100px;
+    text-align: center;
+
+  }
+
+  .mySlides div{
+      display: flex;
+      flex-direction: row;
+      margin-top: 1rem;
+      align-items: center;
+      width: 200px;
+      margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a blue background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: #153A6D;
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border-radius: 50%;
+    border: 2px solid #2A5EA4;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #335A95;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {
+      font-style: italic;
+      color:#66778E ;
+    }
+  
+  /* Add a blue color to the author */
+  .author {
+      color: #395783;
+    }
+    #download{
+        margin-top: 5rem;
+        background-color:#02050A ;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    #download img{
+        height: 700px;
+        margin-top: -8rem;
+    }
+    #download h1{
+        color: #fff;
+    }
+    #download p{
+        padding-top: 2rem;
+        width: 70%;
+        text-align: center;
+        font-size: 14px;
+        color: #66778E;
+    }
+    #download button{
+        margin-top: -8rem;
+    }
+    footer{
+        background-color: #02050A;
+        width: 100%;
+        border-top-color: #14396A;
+        border-top-width: 1px;
+        border-top-style: solid;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 10vh;
+        padding-top: .5rem;
+    }
+    footer p{
+        color: #14396A;
+        padding-top: .5rem;
+    }
+    footer div{
+        width: 100%;
+    }
+    footer div ul{
+        display: flex;
+        flex-direction: row;
+    }
+    footer div ul li a{
+        font-size: 13px;
+        color: #14396A;
+    }
+    footer div ul li a:hover{
+        color: #395783 ;
+        background: none;
+        padding: 0px;
+        border: none ;
+    }
+@media only screen and (max-device-width: 900px) {
+    header{
+        margin-top: 0%;
+    }
+    #logo img{
+        height: 30px;
+    }
+    #logo h1{
+        font-size: 16px;
+    }
+    #burger{
+        top: 1.5rem;
+        height: 16px;
+        width: 1.5rem;
+        z-index: 99;
+    }
+    #menu{
+        width: 100%;
+        
+    }
+    #menu-inpt:checked ~ #burger > span:nth-child(1) {
+        transform: translateY(1px) rotate(45deg);
+    }
+    #menu-inpt:checked ~ #burger > span:nth-child(3) {
+        transform: translateY(-14px) rotate(-45deg);
+    }
+    
+    #title{
+        font-size: 25px;
+    }
+    #sub-title{
+        font-size: 25px;
+    }
+    section p{
+        width: 85%;
+        text-align: center;
+    }
+    .container{
+        margin-top: 10rem;
+    }
+    .img img{
+        height: 100%;
+    }
+    #cards{
+        top: 13rem;
+    }
+    #cards img:nth-child(1){
+        position: absolute;
+        top: 0;
+        height: 60%;
+        width: 60%;
+        object-fit: cover;
+
+    }
+    #cards img:nth-child(2){
+        position: absolute;
+        height: 60%;
+        width: 60%;
+        left: 10rem;
+        top: -0.4rem;
+    }
+    #cards img:nth-child(3){
+        position: absolute;
+        top: 15rem;
+        height: 80%;
+        width: 80%;
+        left: 3rem;
+    }
+    #features{
+        flex-direction: column-reverse;
+        height: 70vh;
+        margin-top: 12rem;
+    }
+    .card-features{
+        flex-direction: column;
+        align-items: center;
+        padding: 18px;
+        width: 100%;
+    }
+    #features img{
+        object-fit: contain;
+        height: 250px;
+        width: 100%;
+    }
+    #cellphone-feature{
+        height: 160vh;
+    }
+    #cellphone-feature section div{
+        width: 100%;
+    }
+    #cellphone-feature section{
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+    }
+    #inner-cellphone div div{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #inner-cellphone div div h1{
+        padding-top: 10px;
+    }
+    #inner-cellphone div div p{
+        padding-top: 10px;
+    }
+    #about{
+        flex-direction: column;
+    }
+    #about div{
+        width: 100%;
+
+    }
+    #img-about{
+        object-fit: cover;
+        height: 250px;
+        width: 105%;
+    }
+    #about div img{
+        margin-left: -4rem;
+    }
+    #about div h1{
+        margin-left: -2rem;
+    }
+    #about div p{
+        margin-left: -3rem;
+    }
+    #opinions{
+        width: 103%;
+    }
+    #download{
+        width: 104%;
+    }
+    #download img{
+        margin-top: -4rem;
+        width: 104%;
+        height: 600px;
+    }
+    #download button{
+        margin-top: -2rem;
+        margin-left: 1rem;
+    }
+    footer{
+        width: 104%;
+    }
+}
